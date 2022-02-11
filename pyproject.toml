@@ -6,6 +6,9 @@ build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
 addopts = "--cov=random_script"
+# This is the test directory which pytest will check.
+# Then looks for any module that starts with test_
+# Goes into the module and runs all funcions with test_
 testpaths = [
     "tests",
 ]
