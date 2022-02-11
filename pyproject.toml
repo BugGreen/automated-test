@@ -2,8 +2,10 @@
 requires = ["setuptools>=42.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+# This is the configuration for pytest and mypy
+
 [tool.pytest.ini_options]
-addopts = "--cov=slapping"
+addopts = "--cov=random_script"
 testpaths = [
     "tests",
 ]
