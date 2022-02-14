@@ -9,9 +9,9 @@ jobs:  # Job to run
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:  # Different os combinations to use
-        ''' In this case, this will create 8 tasks run.
-         - Four (4) for ubuntu-latest.
-         - Four (4) for windows-latest. '''
+        # In this case, this will create 8 tasks run.
+        # - Four (4) for ubuntu-latest.
+        # - Four (4) for windows-latest.
         os: [ubuntu-latest, windows-latest]
         python-version: ['3.6', '3.7', '3.8', '3.9']
 
