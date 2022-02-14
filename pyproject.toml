@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 # This is the configuration for pytest and mypy
 
 [tool.pytest.ini_options]
-addopts = "--cov=random_script"
+addopts = "--cov=random_script"  # This will display the cover report in the terminal
 # This is the test directory which pytest will check.
 # Then looks for any module that starts with test_
 # Goes into the module and runs all funcions with test_

@@ -2,6 +2,7 @@ pyproject.toml
 setup.cfg
 setup.py
 src/random_script/__init__.py
+src/random_script/py.typed
 src/random_script/random_script.py
 src/random_script.egg-info/PKG-INFO
 src/random_script.egg-info/SOURCES.txt
