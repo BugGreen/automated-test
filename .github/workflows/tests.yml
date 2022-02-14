@@ -1,0 +1,29 @@
+name: Tests  # This name will show up in the bash in the readme
+
+on:  # This workflow will run everytime these actions are made
+  - push
+  - pull_request
+
+jobs:  # Job to run
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:  # Different os combinations to use
+        ''' In this case, this will create 8 tasks run.
+         - Four (4) for ubuntu-latest.
+         - Four (4) for windows-latest. '''
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['3.6', '3.7', '3.8', '3.9']
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install tox tox-gh-actions
+    - name: Test with tox
+      run: tox
